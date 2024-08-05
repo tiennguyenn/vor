@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  # node:
+  #   image: node
+  #   volumes:
+  #     - .:/app
+  #   working_dir: /app
+  #   ports:
+  #     - 3000:3000
+
+  web:
+    image: nginx
+    volumes:
+      - ./:/usr/share/nginx/html
+    ports:
+      - 80:80
