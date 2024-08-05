@@ -1,5 +1,5 @@
-import AssignmentList from './AssignmentList.js';
-import AssignmentCreate from './AssignmentCreate.js';
+import AssignmentList from './AssignmentList.js'
+import AssignmentCreate from './AssignmentCreate.js'
 
 export default {
   components: {
@@ -23,14 +23,14 @@ export default {
         { id: 2, name: 'Read chapter 4', complete: false, tag: 'science' },
         { id: 3, name: 'Turn the light', complete: false, tag: 'math' }
       ]
-    };
+    }
   },
   computed: {
     filters() {
       return {
-        inProgress: this.assignments.filter(a => !a.complete),
-        completed: this.assignments.filter(a => a.complete)
-      };
+        inProgress: this.assignments.filter((a) => !a.complete),
+        completed: this.assignments.filter((a) => a.complete)
+      }
     }
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
       this.assignments.push({
         name: name,
         complete: false
-      });
+      })
     }
-  },
-};
+  }
+}

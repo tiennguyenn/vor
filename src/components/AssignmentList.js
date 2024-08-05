@@ -1,5 +1,5 @@
-import AssignmentItem from "./AssignmentItem.js";
-import AssignmentTags from "./AssignmentTags.js";
+import AssignmentItem from './AssignmentItem.js'
+import AssignmentTags from './AssignmentTags.js'
 
 export default {
   components: { AssignmentItem, AssignmentTags },
@@ -16,22 +16,22 @@ export default {
   data() {
     return {
       currentTag: 'all'
-    };
+    }
   },
   computed: {
     filtersByTags() {
       if (this.currentTag === 'all') {
-        return this.assignments;
+        return this.assignments
       }
 
-      return this.assignments.filter(a => a.tag === this.currentTag);
+      return this.assignments.filter((a) => a.tag === this.currentTag)
     },
     tags() {
-      return ['all', ...new Set(this.assignments.map(a => a.tag))];
+      return ['all', ...new Set(this.assignments.map((a) => a.tag))]
     }
   },
   props: {
     assignments: Array,
     title: String
   }
-};
+}

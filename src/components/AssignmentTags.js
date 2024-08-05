@@ -15,4 +15,4 @@ export default {
     tags: Array,
     currentTag: String
   }
-};
+}

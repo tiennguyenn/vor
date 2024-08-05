@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     add() {
-      this.$emit('add', this.newAssignment);
+      this.$emit('add', this.newAssignment)
     }
   }
-};
+}
